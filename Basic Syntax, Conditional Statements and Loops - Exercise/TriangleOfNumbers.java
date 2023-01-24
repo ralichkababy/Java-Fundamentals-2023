@@ -1,8 +1,8 @@
-package BasicSyntax;
+package BasicSyntaxExercise;
 
 import java.util.Scanner;
 
-public class TriangleOfNumbers_08 {
+public class TriangleOfNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());
