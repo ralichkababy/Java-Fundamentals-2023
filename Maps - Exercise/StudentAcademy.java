@@ -4,7 +4,7 @@ public class StudentAcademy_06 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int countStudents = Integer.parseInt(scanner.nextLine());
-        //студент -> списък с оценки
+       
         Map<String, List<Double>> studentGrades = new LinkedHashMap<>();
         for (int i = 0; i < countStudents; i++) {
             String studentName = scanner.nextLine();
@@ -17,7 +17,7 @@ public class StudentAcademy_06 {
         }
 
         //студент -> ср. оценка
-        Map<String, Double> studentAverageGrade = new LinkedHashMap<>(); //студентите ср. оценка >= 4.50
+        Map<String, Double> studentAverageGrade = new LinkedHashMap<>();
         //търсим среданата оценка на всички студенти
         for (Map.Entry<String, List<Double>> entry : studentGrades.entrySet()) {
             //entry -> име (String) + списък с оценки (list<double>)
@@ -28,7 +28,7 @@ public class StudentAcademy_06 {
                 studentAverageGrade.put(studentName, averageGrade);
             }
         }
-        //разменяме записите ако на втория оценката > оценката на първия
+      
         studentAverageGrade.entrySet()
                 .forEach(entry -> System.out.printf("%s -> %.2f%n", entry.getKey(), entry.getValue()));
 
